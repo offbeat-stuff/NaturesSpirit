@@ -120,3 +120,4 @@ run/
 
 # remappedSrc/
 .cache
+.vscode
