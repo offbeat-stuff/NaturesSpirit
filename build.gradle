@@ -20,6 +20,27 @@ repositories {
     maven { url = 'https://maven.parchmentmc.org' }
 }
 
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "${project.modid}" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+
+    accessWidenerPath = file("src/main/resources/natures_spirit.accesswidener")
+}
+
+fabricApi {
+    configureDataGeneration() {
+        createSourceSet = true
+        client = true
+        modId = project.modid + '_datagen'
+    }
+}
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -43,28 +64,6 @@ processResources {
         expand(inputs.properties)
     }
 }
-
-fabricApi {
-    configureDataGeneration() {
-        createSourceSet = false
-        client = false
-        modId = project.modid
-    }
-}
-
-loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        "${project.modid}" {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
-        }
-    }
-
-    accessWidenerPath = file("src/main/resources/natures_spirit.accesswidener")
-}
-
 
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
