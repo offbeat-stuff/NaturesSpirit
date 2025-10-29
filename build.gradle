@@ -40,7 +40,7 @@ processResources {
     inputs.property "minecraft_version", project.minecraft_version
 
     filesMatching("fabric.mod.json") {
-        expand(input.properties)
+        expand(inputs.properties)
     }
 }
 
@@ -53,10 +53,12 @@ fabricApi {
 }
 
 loom {
+    splitEnvironmentSourceSets()
 
     mods {
         "${project.modid}" {
             sourceSet sourceSets.main
+            sourceSet sourceSets.client
         }
     }
 
