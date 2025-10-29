@@ -1,7 +1,6 @@
 package net.hibiscus.naturespirit.datagen;
 
 import com.google.common.collect.ImmutableList;
-import net.hibiscus.naturespirit.NatureSpirit;
 import net.hibiscus.naturespirit.blocks.DesertTurnipStemBlock;
 import net.hibiscus.naturespirit.blocks.DownwardVineBlock;
 import net.hibiscus.naturespirit.registration.NSMiscBlocks;
@@ -21,7 +20,6 @@ import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;

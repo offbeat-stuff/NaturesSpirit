@@ -1,7 +1,6 @@
 package net.hibiscus.naturespirit.datagen;
 
 
-import net.hibiscus.naturespirit.NatureSpirit;
 import net.hibiscus.naturespirit.registration.NSTags;
 import net.hibiscus.naturespirit.registration.NSWoods;
 import net.minecraft.block.Blocks;
@@ -10,7 +9,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;

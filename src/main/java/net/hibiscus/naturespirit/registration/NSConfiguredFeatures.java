@@ -1,57 +1,9 @@
 package net.hibiscus.naturespirit.registration;
 
-import com.google.common.collect.ImmutableList;
 import net.hibiscus.naturespirit.NatureSpirit;
-import net.hibiscus.naturespirit.blocks.DesertTurnipStemBlock;
-import net.hibiscus.naturespirit.blocks.DownwardVineBlock;
-import net.hibiscus.naturespirit.registration.NSMiscBlocks;
-import net.hibiscus.naturespirit.registration.NSTags;
-import net.hibiscus.naturespirit.registration.NSWoods;
-import net.hibiscus.naturespirit.world.feature.NSSimpleBlockStateProvider;
-import net.hibiscus.naturespirit.world.feature.TurnipRootFeatureConfig;
-import net.hibiscus.naturespirit.world.foliage_placer.*;
-import net.hibiscus.naturespirit.world.tree_decorator.*;
-import net.hibiscus.naturespirit.world.trunk.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.MushroomBlock;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntryList;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.collection.DataPool;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.math.intprovider.IntProvider;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.util.math.intprovider.WeightedListIntProvider;
-import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
-import net.minecraft.world.gen.foliage.BushFoliagePlacer;
-import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.NoiseBlockStateProvider;
-import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
-import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
-import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
-import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
-import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-
-import java.util.List;
-import java.util.OptionalInt;
-
-import static net.hibiscus.naturespirit.registration.NSWorldGen.*;
 
 public class NSConfiguredFeatures {
 
